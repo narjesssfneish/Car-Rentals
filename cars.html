@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>our cars</title>
+    <link rel="icon" type="image/webp" href="logo.webp" />
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        
+        background-color: #87ABC3;
+        margin: 0px;
+        padding: 0px;
+        font-family: Arial, sans-serif;
+      }
+      .head {
+        position: relative;
+        background-color: #ff0000;
+        color: #fff;
+        text-align: center;
+        width: 100%;
+        font-size: medium;
+      }
+      .head h1 {
+        margin: 0.5% ;
+      }
+      .head a {
+        text-decoration: none;
+      }
+      .head button {
+        margin: 5px;
+        padding: 10px 20px;
+        font-size: 1rem;
+        background-color: #fff;
+        color: #ff0000;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .head button:hover {
+        background-color: #ffcccc;
+      }
+      .img1,.img2,.img3,.img4,.img5,.img6,.img7,.img8 ,.img9,.img10,.img11,.img12,.img13,.img14,.img15,.img16{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin: 0;
+      }
+      .desc1 ,.desc2,.desc3,.desc4,.desc5,.desc6,.desc7,.desc8,.desc9,.desc10,.desc11,.desc12,.desc13,.desc14,.desc15,.desc16{
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        right: -100%;
+        position: absolute;
+        background: rgba(165, 42, 42, 0.212);
+        backdrop-filter: blur(5px);
+        border-radius: 15px;
+        transition: 2s;
+        margin: 0;
+      }
+      .name1 ,.name2,.name3,.name4,.name5,.name6,.name7,.name8,.name9,.name10,.name11,.name12,.name13,.name14,.name15,.name16{
+        text-align: center;
+      }
+      .rent1,.rent2,.rent3,.rent4,.rent5,.rent6,.rent7,.rent8 ,.rent9,.rent10,.rent11,.rent12,.rent13,.rent14,.rent15,.rent16{
+        background-color: #e2423d;
+        cursor: pointer;
+        border-radius: 2px;
+        color: white;
+        border: none;
+        width: 30%;
+        border-width: 1px;
+        border-color: rgb(121, 27, 42);
+        align-items: center;
+        border-radius: 5px;
+        margin: 10%;
+        margin-left: 35.3%;
+      }
+      .card1 {
+        width: 25%;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+       
+      }
+      .card1:hover .desc1 {
+        right: 0;
+      }
+      .mheader{
+        margin-bottom: 0px;
+      }
+      .firstrow ,.secondrow,.thirdrow,.forthrow {
+        margin: 3%;
+        display: flex;
+        gap: 1%;
+      }
+      .card2 {
+        width: 25%;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+      }
+      .card2:hover .desc2{
+        right: 0;
+      }
+      .card3 {
+        width: 25%;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+      }
+      .card3:hover .desc3{
+        right: 0;
+      }
+      .card4 {
+        width: 25%;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+      }
+      .card4:hover .desc4{
+        right: 0;
+      }
+      .card5 {
+        width: 25%;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+      }
+      .card5:hover .desc5{
+        right: 0;
+      }
+      .card6 {
+        width: 25%;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+      }
+      .card6:hover .desc6{
+        right: 0;
+      }
+      .card7 {
+        width: 25%;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+      }
+      .card7:hover .desc7{
+        right: 0;
+      }
+      .card8 {
+        width: 25%;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+      }
+      .card8:hover .desc8{
+        right: 0;
+      }
+      .card9 {
+        width: 25%;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+      }
+      .card9:hover .desc9{
+        right: 0;
+      }
+      .card10 {
+        width: 25%;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+      }
+      .card10:hover .desc10{
+        right: 0;
+      }
+      .card11 {
+        width: 25%;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+      }
+      .card11:hover .desc11{
+        right: 0;
+      }
+      .card12 {
+        width: 25%;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+      }
+      .card12:hover .desc12{
+        right: 0;
+      }
+      .card13 {
+        width: 25%;
+        
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+      }
+      .card13:hover .desc13{
+        right: 0;
+      }
+      .card14 {
+        width: 25%;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+      }
+      .card14:hover .desc14{
+        right: 0;
+      }
+      .card15 {
+        width: 25%;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+      }
+      .card15:hover .desc15{
+        right: 0;
+      }
+      .card16 {
+        width: 25%;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+      }
+      .card16:hover .desc16{
+        right: 0;
+      }
+      .name1,.name2,.name3,.name4,.name5,.name6,.name7,.name8,
+      .name9,.name10,.name11,.name12,.name13,.name14,.name15,.name16{
+        font-size: 1.2em;
+        color: rgb(0, 0, 0);
+        padding: 3%;
+      }
+      .welcome{
+       margin: 3%;
+
+      }
+      .bye{
+        margin: 3%;
+      }
+      </style>
+  </head>
+  <body>
+    <div class="head">
+      <h1 class="mheader">DriveEase<sup>&#174;</sup></h1>
+
+      <a href="index.html">
+        <button class="home">Home Page</button>
+      </a>
+      <a href="us.html">
+        <button class="profile">Our Profile</button>
+      </a>
+      <a href="cars.html">
+        <button class="car">Our Cars</button>
+      </a>
+      <a href="contact.html">
+        <button class="contact">Contact Us</button>
+      </a>
+
+      <a href="rate.html">
+        <button class="rate">Rate Us</button>
+      </a>
+    </div>
+    <div class="welcome"><h1>OUR JOURNEY BEGINS FROM HERE !!</h1></div>
+    <div class="firstrow">
+    <div class="card1">
+      <img src="car1.jpg" class="img1" />
+      <div class="desc1">
+        <h1 class="name1">NISSAN MICRA</h1>
+        <p class="info1">
+          <ul>
+            <li>4 Cyl - 1.5L - 16V - 97HP</li>
+            <li>Automatic Transmission</li>
+            <li>Electric Power Steering</li>
+            <li>Manual A/C</li>
+            <li> 2DIN AM/FM - MP3 - 4 pxeakers - Auxiliary</li>
+            <li>2 Airbags (Front Driver-Assistant)</li>
+            <li>ABS (Anti-lock Braking system)</li>
+            <li> 4 PASSENGERS</li>
+            <li> 5 DOORS </li>
+            <li> Similar Vehicles:Chevrolet pxark - Hyundai Grand I10</li>
+          </ul>
+
+          <a
+            href="https://api.whatsapp.com/send?phone=+96181698385&text=I Want to rent NISSAN MICRA"
+          >
+            <button class="rent1">Rent</button>
+          </a>
+        </p>
+      </div>
+    </div>
+    <div class="card2">
+      <img src="car2.jpg" class="img2" />
+      <div class="desc2">
+        <h1 class="name2">KIA PICANTO (2023 MODEL)</h1>
+        <p class="info2"><ul>
+          <li>4 Cyl - 1.2L - 16V - 97HP</li>
+          <li>Automatic Transmission</li>
+          <li>Electric Power Steering</li>
+          <li>Manual A/C</li>
+          <li>  2DIN AM/FM - MP3 - 4 pxeakers - Auxiliary - Bluetooth</li>
+          <li>2 Airbags (Front Driver-Assistant)</li>
+          <li>ABS (Anti-lock Braking system)</li>
+          <li> 4 PASSENGERS</li>
+          <li> 5 DOORS </li>
+          <li> Similar Vehicles:Chevrolet pxark - Hyundai Grand I10</li>
+        </ul>
+        <a href="https://api.whatsapp.com/send?phone=+96181698385&text=I Want to rent KIA PICANTO(2023 MODEL)">
+          <button class="rent2">Rent</button>
+        </a>
+      </p>
+      </div>
+    </div>
+    <div class="card3">
+      <img src="car3.jpg" class="img3" />
+      <div class="desc3">
+        <h1 class="name3">HYUNDAI SOLARIS</h1>
+        <p class="info3"><ul>
+          <li>4 Cyl - 1.2L - 16V - 97HP</li>
+          <li>Automatic Transmission</li>
+          <li>Electric Power Steering</li>
+          <li>Manual A/C</li>
+          <li>  2DIN AM/FM - MP3 - 4 pxeakers - Auxiliary - Bluetooth</li>
+          <li>2 Airbags (Front Driver-Assistant)</li>
+          <li>ABS (Anti-lock Braking system)</li>
+          <li> 4 PASSENGERS</li>
+          <li> 5 DOORS </li>
+          <li> Similar Vehicles:Nissan Sunny - Chevrolet Cobalt - Chevrolet Aveo</li>
+        </ul>
+        <a href="https://api.whatsapp.com/send?phone=+96181698385&text=I Want to rent HYUNDAI SOLARIS">
+          <button class="rent3">Rent</button>
+        </a>
+      </p>
+      </div>
+    </div>
+    <div class="card4">
+      <img src="car4.jpg" class="img4" />
+      <div class="desc4">
+        <h1 class="name4">Kia Rio Hatchback(2023 Model) </h1>
+        <p class="info4"><ul>
+          <li>4 Cyl - 1.5L - 102 HP</li>
+          <li>Power and tilt steering</li>
+          <li>Automatic A/C</li>
+          <li>AM/FM - BLUETOOTH - USB - 4 pxeakers</li>
+          <li>2 Airbags (Front Driver-Assistant)</li>
+          <li>ABS - Anti-Lock Braking System</li>
+          <li>TCS - Traction Control System</li>
+          <li> 4 PASSENGERS</li>
+          <li> 5 DOORS </li>
+          <li> Similar Vehicles:Renault Sandero</li>
+        </ul>
+        <a href="https://api.whatsapp.com/send?phone=+96181698385&text=I Want to rent Kia Rio Hatchback(2023 Model) ">
+          <button class="rent4">Rent</button>
+        </a>
+      </p>
+      </div>
+    </div>
+    </div>
+    <div class="secondrow">
+    <div class="card5">
+      <img src="car5.jpg" class="img5" />
+      <div class="desc5">
+        <h1 class="name5">NISSAN SUNNY (2022 MODEL)</h1>
+        <p class="info5"><ul>
+          <li>4 Cyl - 1.2L - 16V - 97HP</li>
+          <li>Automatic Transmission</li>
+          <li>Electric Power Steering</li>
+          <li>Manual A/C</li>
+          <li>  2DIN AM/FM - MP3 - 4 pxeakers - Auxiliary - Bluetooth</li>
+          <li>2 Airbags (Front Driver-Assistant)</li>
+          <li>TCS - Traction Control System</li>
+          <li> 4 PASSENGERS</li>
+          <li> 5 DOORS </li>
+          <li> Similar Vehicles:Hyundai Tucson</li>
+        </ul>
+        <a href="https://api.whatsapp.com/send?phone=+96181698385&text=I Want to rent NISSAN SUNNY (2022 MODEL)">
+          <button class="rent5">Rent</button>
+        </a>
+      </p>
+      </div>
+    </div>
+    <div class="card6">
+      <img src="car6.jpg" class="img6" />
+      <div class="desc6">
+        <h1 class="name6">NISSAN SUNNY (2022 MODEL)</h1>
+        <p class="info6"><ul>
+          <li>4 Cyl - 1.2L - 16V - 97HP</li>
+          <li>Automatic Transmission</li>
+          <li>Electric Power Steering</li>
+          <li>Manual A/C</li>
+          <li>  2DIN AM/FM - MP3 - 4 pxeakers - Auxiliary - Bluetooth</li>
+          <li>2 Airbags (Front Driver-Assistant)</li>
+          <li>TCS - Traction Control System</li>
+          <li> 4 PASSENGERS</li>
+          <li> 5 DOORS </li>
+          <li> Similar Vehicles:Nissan Sentra</li>
+        </ul>
+        <a href="https://api.whatsapp.com/send?phone=+96181698385&text=I Want to rent KIA Cerato">
+          <button class="rent6">Rent</button>
+        </a>
+      </p>
+      </div>
+    </div>
+    <div class="card7">
+      <img src="car7.jpg" class="img7" />
+      <div class="desc7">
+        <h1 class="name7">V.W Jetta</h1>
+        <p class="info7"><ul>
+          <li>4 Cyl - 1.2L - 16V - 97HP</li>
+          <li>TIPTRONIC GEARBOX</li>
+          <li>Electric Power Steering</li>
+          <li>Manual A/C</li>
+          <li>AM/FM - MP3 - USB - Bluetooth - 4 pxeakers - Auxiliary</li>
+          <li>2 Airbags (Front Driver-Assistant)</li>
+          <li>TCS - Traction Control System</li>
+          <li> 4 PASSENGERS</li>
+          <li> 5 DOORS </li>
+          <li> Similar Vehicles:Hyundai Elantra (4 Doors) - Toyota Corolla (4 Doors)</li>
+        </ul>
+        <a href="https://api.whatsapp.com/send?phone=+96181698385&text=I Want to rent V.W Jetta">
+          <button class="rent7">Rent</button>
+        </a>
+      </p>
+      </div>
+    </div>
+    <div class="card8">
+      <img src="car8.jpg" class="img8" />
+      <div class="desc8">
+        <h1 class="name8">PEUGEOT 2008 </h1>
+        <p class="info8"><ul>
+          <li>4 Cyl - 2.0L - 115 HP</li>
+          <li>TIPTRONIC GEARBOX</li>
+          <li>Power and tilt steering</li>
+          <li>Automatic A/C</li>
+          <li>AM/FM - MP3 - USB - Bluetooth - 4 pxeakers - Auxiliary</li>
+          <li>2 Airbags (Front Driver-Assistant)</li>
+          <li>TCS - Traction Control System</li>
+          <li> 4 PASSENGERS</li>
+          <li> 5 DOORS </li>
+          <li> Similar Vehicles:Nissan Kicks (5 Doors) - Citroen C3 (5 Doors)</li>
+        </ul>
+        <a href="https://api.whatsapp.com/send?phone=+96181698385&text=I Want to rent PEUGEOT 2008 ">
+          <button class="rent8">Rent</button>
+        </a>
+      </p>
+      </div>
+    </div>
+  </div>
+    <div class="thirdrow">
+    <div class="card9">
+      <img src="car9.jpg" class="img9" />
+      <div class="desc9">
+        <h1 class="name9">Jaguar F-Pace </h1>
+        <p class="info9"><ul>
+          <li>Engine Power 3.0L - V6 - Supercharged</li>
+          <li>Tiptronic</li>
+          <li>Power and tilt steering</li>
+          <li>Automatic A/C (Rear A/C)</li>
+          <li>AM/FM - MP3 - USB - Bluetooth - Auxiliary</li>
+          <li>4 Airbags</li>
+          <li>ABS - Anti-Lock Braking System</li>
+          <li>Traction Control System</li>
+          <li> 4 PASSENGERS</li>
+          <li> 5 DOORS </li>
+          
+        </ul>
+        <a href="https://api.whatsapp.com/send?phone=+96181698385&text=I Want to rent Jaguar F-Pace ">
+          <button class="rent9">Rent</button>
+        </a>
+      </p>
+      </div>
+    </div>
+    <div class="card10">
+      <img src="car10.jpg" class="img10" />
+      <div class="desc10">
+        <h1 class="name10">BMW 3 SERIES </h1>
+        <p class="info10"><ul>
+          <li>1.8L/2.0L Intercooled Turbo Premium</li>
+          <li>Unleaded I-4</li>
+          <li>TIPTRONIC GEARBOX</li>
+          <li>Power and tilt steering</li>
+          <li>Automatic A/C</li>
+          <li>AM/FM - MP3 - USB - Bluetooth - 4 pxeakers - Auxiliary</li>
+          <li>2 Airbags</li>
+          <li>4-Wheel ABS - Anti-Lock Braking System</li>
+          <li> 4 PASSENGERS</li>
+          <li> 5 DOORS </li>
+         
+        </ul>
+        <a href="https://api.whatsapp.com/send?phone=+96181698385&text=I Want to rent BMW 3 SERIES ">
+          <button class="rent10">Rent</button>
+        </a>
+      </p>
+      </div>
+    </div>
+    <div class="card11">
+      <img src="car11.jpg" class="img11" />
+      <div class="desc11">
+        <h1 class="name11">GMC TERRAIN </h1>
+        <p class="info11"><ul>
+          <li>2.0L TURBO I-4 ENGINE</li>
+          <li>TIPTRONIC GEARBOX</li>
+          <li>Power and tilt steering</li>
+          <li>AM/FM - MP3 - USB - Bluetooth - 4 pxeakers - Auxiliary</li>
+          <li>Automatic A/C</li>
+          <li>2 Airbags</li>
+          <li>ABS - Anti-Lock Braking System</li>
+          <li> 5 PASSENGERS</li>
+          <li> 5 DOORS </li>
+          <li> Similar Vehicles:V.W Tiguan - Audi Q3 - Toyota Rav4</li>
+        </ul>
+        <a href="https://api.whatsapp.com/send?phone=+96181698385&text=I Want to rent GMC TERRAIN ">
+          <button class="rent11">Rent</button>
+        </a>
+      </p>
+      </div>
+    </div>
+    <div class="card12">
+      <img src="car12.jpg" class="img12" />
+      <div class="desc12">
+        <h1 class="name12">Cadillac XT4 (2022 Model) </h1>
+        <p class="info12"><ul>
+          <li>Engine Power 2.0L TFSI</li>
+          <li>TIPTRONIC GEARBOX</li>
+          <li>Power and tilt steering</li>
+          <li>AM/FM - MP3 - USB - Bluetooth - 4 pxeakers - Auxiliary</li>
+          <li>Automatic A/C</li>
+          <li>2 Airbags</li>
+          <li>ABS - Anti-Lock Braking System</li>
+          <li> 5 PASSENGERS</li>
+          <li> 5 DOORS </li>
+          <li> Similar Vehicles:N.A</li>
+        </ul>
+        <a href="https://api.whatsapp.com/send?phone=+96181698385&text=I Want to rent Cadillac XT4 (2022 Model) ">
+          <button class="rent12">Rent</button>
+        </a>
+      </p>
+      </div>
+    </div>
+  </div>
+  <div class="forthrow">
+    <div class="card13">
+      <img src="car13.jpg" class="img13" />
+      <div class="desc13">
+        <h1 class="name13">Chevy Blazer </h1>
+        <p class="info13"><ul>
+          <li>Engine Power 3.6L - V6</li>
+          <li>Automatic Gear Box</li>
+          <li>4 wheel drive</li>
+          <li>Power and tilt steering</li>
+          <li>Automatic A/C</li>
+          <li>AM/FM - MP3 - USB - Bluetooth - 4 pxeakers - Auxiliary</li>
+          <li>2 Airbags</li>
+          <li>ABS - Anti-Lock Braking System</li>
+          <li> 7 PASSENGERS</li>
+          <li> 5 DOORS </li>
+          <li> Similar Vehicles:Mitsubishi Pajero - Toyota Fortuner</li>
+        </ul>
+        <a href="https://api.whatsapp.com/send?phone=+96181698385&text=I Want to rent Chevy Blazer ">
+          <button class="rent13">Rent</button>
+        </a>
+      </p>
+      </div>
+    </div>
+    <div class="card14">
+      <img src="car14.jpg" class="img14" />
+      <div class="desc14">
+        <h1 class="name14">Chevrolet Tahoe Z71 (2022) </h1>
+        <p class="info14"><ul>
+          <li>Engine Power 3.6L - V6</li>
+          <li>Automatic Gear Box</li>
+          <li>4 wheel drive</li>
+          <li>Power and tilt steering</li>
+          <li>Automatic A/C</li>
+          <li>AM/FM - MP3 - USB - Bluetooth - 4 pxeakers - Auxiliary</li>
+          <li>2 Airbags</li>
+          <li>ABS - Anti-Lock Braking System</li>
+          <li> 7 PASSENGERS</li>
+          <li> 5 DOORS </li>
+          <li> Similar Vehicles:Chevrolet Tahoe Z71</li>
+
+        </ul>
+        <a href="https://api.whatsapp.com/send?phone=+96181698385&text=I Want to rent Chevrolet Tahoe Z71 (2022) ">
+          <button class="rent14">Rent</button>
+        </a>
+      </p>
+      </div>
+    </div>
+    <div class="card15">
+      <img src="car15.jpg" class="img15" />
+      <div class="desc15">
+        <h1 class="name15">GMC YUKON  </h1>
+        <p class="info15"><ul>
+          <li>Engine Power 3.6L - V6</li>
+          <li>Automatic Gear Box</li>
+          <li>4 wheel drive</li>
+          <li>Power and tilt steering</li>
+          <li>Automatic A/C</li>
+          <li>AM/FM - MP3 - USB - Bluetooth - 4 pxeakers - Auxiliary</li>
+          <li>2 Airbags</li>
+          <li>ABS - Anti-Lock Braking System</li>
+          <li> 7 PASSENGERS</li>
+          <li> 5 DOORS </li>
+          <li> Similar Vehicles:Nissan Patrol</li>
+        </ul>
+        <a href="https://api.whatsapp.com/send?phone=+96181698385&text=I Want to rent GMC Yukon ">
+          <button class="rent15">Rent</button>
+        </a>
+      </p>
+      </div>
+    </div>
+    <div class="card16">
+      <img src="car16.jpg" class="img16" />
+      <div class="desc16">
+        <h1 class="name16">Jeep Wrangler Unlimited  </h1>
+        <p class="info16"><ul>
+          <li>Engine Power 3.6L - V6</li>
+          <li>Automatic Gear Box</li>
+          <li>4 wheel drive</li>
+          <li>Power and tilt steering</li>
+          <li>Automatic A/C</li>
+          <li>AM/FM - MP3 - USB - Bluetooth - 4 pxeakers - Auxiliary</li>
+          <li>2 Airbags</li>
+          <li>ABS - Anti-Lock Braking System</li>
+          <li> 5 PASSENGERS</li>
+          <li> 5 DOORS </li>
+          <li> Similar Vehicles:N.A</li>
+        </ul>
+        <a href="https://api.whatsapp.com/send?phone=+96181698385&text=I Want to rent Jeep Wrangler Unlimited ">
+          <button class="rent16">Rent</button>
+        </a>
+      </p>
+      </div>
+    </div>
+  </div>
+    
+    <div class="bye"><h1>AND MORE CARS WILL BE AVAILABLE SOON... </h1></div>
+  </body>
+ 
+</html>
